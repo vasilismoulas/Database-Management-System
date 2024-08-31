@@ -1,0 +1,156 @@
+
+/* general container */
+.background-container {
+            background-color: black;
+            color: white; /* Set text color to white or another contrasting color */
+            padding: 20px; /* Adjust padding as needed */
+}
+
+/* The side navigation menu (used: universally)*/
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.menu-text{
+
+font-family: 'Impact';
+
+}
+
+/*Hoverable Dropdown*/
+/* Style for the dropdown container */
+ /* Style for the dropdown container */
+ .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown content when hovering over the dropdown container */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Index.php CONTENTS */
+/*Index.php BUTTON for the DATABASES INITIALISATION */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  transition: background-color 0.3s ease;
+  max-height: 100vh;
+}
+
+.content button {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #04AA6D;
+}
+
+.content button:active {
+  background-color: #555; /* Change to the desired background color when pressed */
+}
+
+/* sensors.php CONTENTS */
+/*In this part it takes place the users functionality for Insertion/Deletion*/
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 20px auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+form {
+  text-align: center;
+  margin: 20px auto;
+}
+
+
+/* Table Stylish */
+
+    th {
+      background-color: #04AA6D;     
+    }
+
+/* RESPONSIVENESS */
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
